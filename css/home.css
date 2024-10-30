@@ -92,6 +92,8 @@ a:hover {
 .top-cloud {
   position: absolute;
   right: 400px;
+  max-width: 100%;
+  height: auto;
   top: 100px;
 }
 
@@ -99,25 +101,27 @@ a:hover {
   position: absolute;
   left: 400px;
   bottom: 300px;
+  max-width: 100%;
+  height: auto;
 }
 
 .code-img {
-  width: 25%;
-  height: 200px;
+  max-width: 25%;
+  height: auto;
   float: left;
   margin-right: 30px;
 }
 
 .code1-img {
-  width: 25%;
-  height: 250px;
+  max-width: 25%;
+  height: auto;
   float: right;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .code2-img {
-  height: 350px;
-  width: 25%;
+  max-width: 25%;
+  height: auto;
   float: left;
   margin-right: 30px;
 }
@@ -183,4 +187,25 @@ a:hover {
   background-color: #11999e;
   color: #ffffff;
   border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
 }
